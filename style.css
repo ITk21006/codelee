@@ -1,0 +1,26 @@
+/* Make profile image rounded */
+.img-fluid.rounded-circle {
+  border-radius: 50%;
+}
+
+/* Set font family to Consolas for all text */
+body {
+  font-family: Consolas, monospace;
+}
+
+/* Make profile image rounded */
+.img-fluid.rounded-circle {
+  border-radius: 50%;
+}
+
+.correct {
+	color: green;
+}
+
+.incorrect {
+	color: red;
+}
+
+.missing {
+	color: orange;
+}

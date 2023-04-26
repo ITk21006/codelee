@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>C++ Page 2</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <!-- Font Awesome CSS -->
+    <script src="https://kit.fontawesome.com/aa405a5c76.js" crossorigin="anonymous"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <!-- Home and Tests links on the left side -->
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fas fa-clipboard"></i> Tests
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Cpp.html">C++</a></li>
+                <li><a href="#">SQL</a></li>
+                <li><a href="#">Python</a></li>
+                <li><a href="#">HTML</a></li>
+              </ul>
+            </li>
+          </ul>
+          <!-- Contact link on the right side -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Getting started with C++</h1>
+      <p>Lets start with the most basic task in programming: "Hello, world!"</p>
+      <p>"Hello, world!" is the simplest program to show how the language works. It is usually the first thing new programmers write because it displays how a language is structured.</p>
+      <p>Also from now on you will be given a snippet of code, your task is to complete the code with the missing line, but before that, lets break down the code:</p>
+      <ul>
+        <li><code>#include &lt;iostream&gt;</code> is a <i><b>header file library</b></i> that lets us work with input and output objects, such as <code>cout</code>. Header files add functionality to C++ programs.</li>
+        <li><code>using namespace std</code> means that we can use names for objects and variables from the standard library.</li>
+      </ul>
+      <p>It's fine you don't understand these two, that is just almost always used for the code to work.</p>
+      <ul>
+        <li><code>int main()</code> is a <i><b>function</b></i>, any code inside its curly brackets <code>{}</code> will be executed.</li>
+        <li><code>cout</code> (pronounced "see-out") is an <i><b>object</b></i> used together with the <i>insertion operator</i> <code><<</code> to output text. In this example the output will be "Hello World!"</li>
+        <li><code>return 0</code> ends the main function.</li>
+      </ul>
+      <p>To write and compile your own C++ you'll need a compiler, like <a href="https://www.onlinegdb.com/">OnlineGDB,</a> which has over 30 languages available.</p>
+      <div class="row">
+        <div class="col-md-5">
+          <pre>
+            <code>
+              #include &lt;iostream&gt;
+              using namespace std;
+              
+              int main() {
+                <input type="text" id="answer" name="answer" required size="25">
+                  return 0;
+              }
+            </code>
+          </pre>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <p>Fill in the missing code to print <b>"Hello World!"</b> to the console:</p>
+          <form onsubmit="checkAnswer1(event)">
+
+            <br>
+            <button class="btn btn-primary" type="submit">Check code</button>
+          </form>
+          <br>
+          <br>
+          <div id="result"></div>
+          <div id="unlockButton" style="display: none;">
+            <br>
+            <a href="index.html">
+              <button id="Page3">Go to next page</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+		<script>
+			function checkAnswer1(event) {
+				event.preventDefault(); // prevent form submission
+				const answer = document.getElementById('answer').value.trim();
+				if (answer === 'cout << "Hello World!";') {
+					document.getElementById('result').innerHTML = '<div class="correct">Correct!</div>';
+					document.getElementById('unlockButton').style.display = "block";
+				} else if (answer === 'cout << "Hello World!"') {
+					document.getElementById('result').innerHTML = '<div class="missing">Something is missing...</div>';
+				} else {
+					document.getElementById('result').innerHTML = '<div class="incorrect">Incorrect. Please try again.</div>';
+				}
+			}
+		</script>
+
+  </body>
+</html>
+    
